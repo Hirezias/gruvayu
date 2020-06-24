@@ -1,11 +1,3 @@
-" -----------------------------------------------------------------------------
-" File: gruvayu.vim
-" Description: Retro groove color scheme for Vim
-" Author: morhetz <morhetz@gmail.com>
-" Source: https://github.com/morhetz/gruvayu
-" Last Modified: 12 Aug 2017
-" -----------------------------------------------------------------------------
-
 " Supporting code -------------------------------------------------------------
 " Initialisation: {{{
 
@@ -86,50 +78,51 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 " fill it with absolute colors
-let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
-let s:gb.dark0       = ['#180a18', 235]     " 40-40-40                  ok
-let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
-let s:gb.dark1       = ['#251029', 237]     " 60-56-54                  ok
-let s:gb.dark2       = ['#3d203d', 239]     " 80-73-69                  ok
-let s:gb.dark3       = ['#af76af', 241]     " 102-92-84                 ok
-let s:gb.dark4       = ['#402845', 243]     " 124-111-100               ok ?
-let s:gb.dark4_256   = ['#7c6f64', 243]     " 124-111-100
+let s:gb.dark0_hard  = ['#1d2021', 234]
+let s:gb.dark0       = ['#080a0c', 235]
+let s:gb.dark0_soft  = ['#f23020', 236]
+let s:gb.dark1       = ['#151620', 237]
+let s:gb.dark2       = ['#2d203d', 239]
+let s:gb.dark3       = ['#353555', 241]
+let s:gb.dark4       = ['#444454', 243]
+let s:gb.dark4_256   = ['#7c6f64', 243]
 
-let s:gb.gray_245    = ['#a895a0', 245]     " 146-131-116
-let s:gb.gray_244    = ['#928374', 244]     " 146-131-116
+let s:gb.gray_245    = ['#5C6783', 245]
+let s:gb.gray_244    = ['#928374', 244]
 
-let s:gb.light0_hard = ['#e9def6', 230]     " 249-245-215
-let s:gb.light0      = ['#dfcdf3', 229]     " 253-244-193
-let s:gb.light0_soft = ['#f9e5cc', 228]     " 242-229-188
-let s:gb.light1      = ['#f9e5fa', 223]     " 235-219-178               ok
-let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
-let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
-let s:gb.light4      = ['#a88994', 246]     " 168-153-132
-let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
+let s:gb.light0_hard = ['#e9def6', 230]
+let s:gb.light0      = ['#e6e1cf', 229]
+let s:gb.light0_soft = ['#bbbbbb', 228]
+let s:gb.light1      = ['#d9d2b6', 223]
+let s:gb.light2      = ['#d5c4a1', 250]
+let s:gb.light3      = ['#bdae93', 248]
+let s:gb.light4      = ['#a88994', 246]
+let s:gb.light4_256  = ['#a89984', 246]
 
-let s:gb.bright_red     = ['#cf4383', 167]     " 251-73-52              ok
-let s:gb.bright_green   = ['#b7e58c', 142]     " 184-187-38
-let s:gb.bright_yellow  = ['#fdc09b', 214]     " 250-189-47             ok
-let s:gb.bright_blue    = ['#307cb1', 109]     " 131-165-152
-let s:gb.bright_purple  = ['#f060d8', 175]     " 211-134-155
-let s:gb.bright_aqua    = ['#aacdff', 108]     " 142-192-124
-let s:gb.bright_orange  = ['#ffb4ca', 208]     " 254-128-25
+let s:gb.bright_red     = ['#ff3333', 167]
+let s:gb.bright_green   = ['#b8cc52', 142]
 
-let s:gb.neutral_red    = ['#ef5757', 124]     " 204-36-29
-let s:gb.neutral_green  = ['#85cb33', 106]     " 152-151-26
-let s:gb.neutral_yellow = ['#9cd0A1', 172]     " 215-153-33
-let s:gb.neutral_blue   = ['#50a2a7', 66]      " 69-133-136
-let s:gb.neutral_purple = ['#9055a2', 132]     " 177-98-134
-let s:gb.neutral_aqua   = ['#7d82b8', 72]      " 104-157-106
-let s:gb.neutral_orange = ['#ff99b8', 166]     " 214-93-14
+let s:gb.bright_yellow  = ['#ffee99', 214]
+let s:gb.bright_blue    = ['#36a6d9', 109]
+let s:gb.bright_purple  = ['#f29718', 175]
+let s:gb.bright_aqua    = ['#ffb454', 108]
+let s:gb.bright_orange  = ['#ff7744', 208]
 
-let s:gb.faded_red      = ['#9d0006', 88]      " 157-0-6
-let s:gb.faded_green    = ['#79740e', 100]     " 121-116-14
-let s:gb.faded_yellow   = ['#b57614', 136]     " 181-118-20
-let s:gb.faded_blue     = ['#076678', 24]      " 7-102-120
-let s:gb.faded_purple   = ['#8f3f71', 96]      " 143-63-113
-let s:gb.faded_aqua     = ['#427b58', 66]      " 66-123-88
-let s:gb.faded_orange   = ['#af3a03', 130]     " 175-58-3
+let s:gb.neutral_red    = ['#ef5757', 124]
+let s:gb.neutral_green  = ['#85cb33', 106]
+let s:gb.neutral_yellow = ['#9cd0A1', 172]
+let s:gb.neutral_blue   = ['#50a2a7', 66]
+let s:gb.neutral_purple = ['#9055a2', 132]
+let s:gb.neutral_aqua   = ['#7d82b8', 72]
+let s:gb.neutral_orange = ['#ff99b8', 166]
+
+let s:gb.faded_red      = ['#cd0000', 88]
+let s:gb.faded_green    = ['#5d6b16', 100]
+let s:gb.faded_yellow   = ['#9b8100', 136]
+let s:gb.faded_blue     = ['#19709c', 24]
+let s:gb.faded_purple   = ['#a96609', 96]
+let s:gb.faded_aqua     = ['#e28000', 66]
+let s:gb.faded_orange   = ['#cd4400', 130]
 
 " }}}
 " Setup Emphasis: {{{
@@ -578,40 +571,40 @@ call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
 call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
 
 " Generic statement
-hi! link Statement GruvayuRedBold
+hi! link Statement GruvayuOrange
 " if, then, else, endif, swicth, etc.
-hi! link Conditional GruvayuRedBold
+hi! link Conditional GruvayuOrange
 " for, do, while, etc.
-hi! link Repeat GruvayuRedBold
+hi! link Repeat GruvayuOrange
 " case, default, etc.
-hi! link Label GruvayuRedBold
+hi! link Label GruvayuOrange
 " try, catch, throw
-hi! link Exception GruvayuRedBold
+hi! link Exception GruvayuOrange
 " sizeof, "+", "*", etc.
-hi! link Operator GruvayuYellow
+hi! link Operator GruvayuAqua
 " Any other keyword
-hi! link Keyword GruvayuRed
+hi! link Keyword GruvayuYellow
 
 " Variable name
 hi! link Identifier GruvayuBlue
 " Function name
-hi! link Function GruvayuYellow
+hi! link Function GruvayuPurple
 
 " Generic preprocessor
-hi! link PreProc GruvayuPurple
+hi! link PreProc GruvayuYellow
 " Preprocessor #include
-hi! link Include GruvayuPurple
+hi! link Include GruvayuYellow
 " Preprocessor #define
-hi! link Define GruvayuPurple
+hi! link Define GruvayuYellow
 " Same as Define
-hi! link Macro GruvayuPurple
+hi! link Macro GruvayuYellow
 " Preprocessor #if, #else, #endif, etc.
-hi! link PreCondit GruvayuPurple
+hi! link PreCondit GruvayuYellow
 
 " Generic constant
-hi! link Constant GruvayuPurpleBold
+hi! link Constant GruvayuPurple
 " Character constant: 'c', '/n'
-hi! link Character GruvayuGreenBold
+hi! link Character GruvayuGreen
 " String constant: "this is a string"
 if g:gruvayu_improved_strings == 0
   call s:HL('String',  s:green, s:none, s:italicize_strings)
@@ -619,20 +612,20 @@ else
   call s:HL('String',  s:fg1, s:bg1, s:italicize_strings)
 endif
 " Boolean constant: TRUE, false
-hi! link Boolean GruvayuAquaBold
+hi! link Boolean GruvayuGreenBold
 " Number constant: 234, 0xff
-hi! link Number GruvayuAquaBold
+hi! link Number GruvayuGreenBold
 " Floating point constant: 2.3e10
-hi! link Float GruvayuAquaBold
+hi! link Float GruvayuGreenBold
 
 " Generic type
 hi! link Type GruvayuBlueBold
 " static, register, volatile, etc
-hi! link StorageClass GruvayuOrange
+hi! link StorageClass GruvayuPurple
 " struct, union, enum, etc.
-hi! link Structure GruvayuRedBold
+hi! link Structure GruvayuOrange
 " typedef
-hi! link Typedef GruvayuRedBold
+hi! link Typedef GruvayuOrange
 
 " }}}
 " Completion Menu: {{{
